@@ -1,0 +1,135 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#main{ 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    
+}
+#part{
+    height: 100%;
+    width:100%;
+}
+
+
+
+#text-div{
+     position: absolute;
+     left: 8%;
+     top: 32%;
+}
+#text-div>h1{
+    font-size: 90px;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    text-transform: uppercase;
+    line-height: 100px;
+    animation: slide-up 3s ease-in-out ;
+    animation-delay: 0s;
+}
+@keyframes slide-up
+  {
+    0%
+  {
+    transform: translateY(200px)
+  }
+  100%
+  {
+    transform: translateY(0)
+  }
+  }
+    
+
+    
+/* Main scrolling text container */
+#verti {
+    position: absolute;  
+    transform: rotate(90deg);  /* Rotates the text horizontally */
+    right: -125%;
+    top: -5%;
+    transform-origin: 0% 0%;  
+    animation: verticalScroll 10s ease-in-out 1s infinite;
+    animation-delay: 0s;
+}
+
+/* Styling for the text */
+#verti h1 {
+    font-size: 100px;
+    color: transparent;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes verticalScroll {
+    0% {
+        top: 100%;  /* Start below the container */
+        opacity: 0; /* Invisible at the start */
+    }
+    10% {
+        opacity: 1; /* Fade in smoothly */
+    }
+    90% {
+        opacity: 1; /* Keep visible until near the end */
+    }
+    100% {
+        top: -100%; /* Scroll off the top */
+        opacity: 0; /* Fade out smoothly */
+    }
+}
+#nav{
+    position: absolute;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 8%;
+    top: 12%;
+    animation:scrolling 1s ease-in-out ;
+    animation-delay: 0s;
+    
+}
+
+#nav h3{
+    font-size: 40px;
+    color:white;
+    font-family: "Playfair Display", serif;
+   letter-spacing: 5px;
+   text-transform: uppercase;
+   
+  
+}
+@keyframes scrolling
+{
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+          transform: translateX(0px);
+    }
+}
+
+#bg-video {
+    position: absolute;
+    height: 628px;
+    width: 2000px;
+    top: 17%;
+    right: 0%
+    
+}
+
+   
+  
